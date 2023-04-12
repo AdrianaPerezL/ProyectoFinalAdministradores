@@ -14,7 +14,7 @@ function Sidebar() {
     <div className='sidebar min-vh-100'>
         <div>
             <i className='me-3 fs-4'><img src={logo} width='50px' /></i>
-            <span className='brand-name fs-4'>Hola</span>
+            <span className='brand-name fs-4' style={{color: "#ffffff"}}>Bienvenidos</span>
         </div>
         <div className='list-group list-group-flush' style={{backgroundColor: "#572AB0"}}>
             <a className='list-group-item list-group-item-action py-2 my-1' style={{backgroundColor: "#572AB0"}}>
