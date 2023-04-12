@@ -8,8 +8,8 @@ import '../assets/styles/sidebar.css'
 function Sidebar() {
   return (
     
-            <div className='col-2 p-0 '>
-    <div className='bg-black sidebar min-vh-100'>
+            <div className=' p-0 '>
+    <div className='sidebar min-vh-100'>
         <div>
             <i className='me-3 fs-4'><img src={logo} width='50px' /></i>
             <span className='brand-name fs-4'>Hola</span>

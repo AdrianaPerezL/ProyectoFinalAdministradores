@@ -17,7 +17,7 @@ function Dashboard(Toggle) {
                                     <h3 className='fs-2'>230</h3>
                                     <p className='fs-5'>Alumnos</p>
                                 </div>
-                                <FontAwesomeIcon className="p-3 fs-1" icon={faBars} onClick={Toggle} />
+                                <FontAwesomeIcon className="p-3 fs-1" icon={faBars}  />
                             </div>
                         </div>
                         <div className='col-md-3 p-1'>
@@ -26,7 +26,7 @@ function Dashboard(Toggle) {
                                     <h3 className='fs-2'>100</h3>
                                     <p className='fs-5'>Escuelas</p>
                                 </div>
-                                <FontAwesomeIcon className="p-3 fs-1" icon={faBars} onClick={Toggle} />
+                                <FontAwesomeIcon className="p-3 fs-1" icon={faBars}  />
                             </div>
                         </div>
                         <div className='col-md-3 p-1'>
@@ -35,7 +35,7 @@ function Dashboard(Toggle) {
                                     <h3 className='fs-2'>10</h3>
                                     <p className='fs-5'>Maestros</p>
                                 </div>
-                                <FontAwesomeIcon className="p-3 fs-1" icon={faBars} onClick={Toggle} />
+                                <FontAwesomeIcon className="p-3 fs-1" icon={faBars}  />
                             </div>
                         </div>
                         <div className='col-md-3 p-1'>
@@ -44,7 +44,7 @@ function Dashboard(Toggle) {
                                     <h3 className='fs-2'>1</h3>
                                     <p className='fs-5'>Administrador</p>
                                 </div>
-                                <FontAwesomeIcon className="p-3 fs-1" icon={faBars} onClick={Toggle} />
+                                <FontAwesomeIcon className="p-3 fs-1" icon={faBars}  />
                             </div>
                         </div>
                     </div>
