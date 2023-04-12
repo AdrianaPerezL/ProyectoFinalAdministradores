@@ -1,5 +1,9 @@
 .list-group a:hover{
-    background-color: blue;
+    background-color: #D9F3F0;
     color: white;
     cursor: pointer;
+}
+
+.sidebar{
+    color: #D9F3F0
 }

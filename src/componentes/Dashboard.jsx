@@ -2,16 +2,17 @@ import React from 'react'
 import Navbar from './Navbar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
+import '../assets/styles/dashboard.css'
 
 
 function Dashboard(Toggle) {
     return (
         <div>
-            <div className='px-3'>
+            <div className='px-3 '>
                 <Navbar Toggle={Toggle} />
-                <div className='container-fluid'>
+                <div className='container-fluid '>
                     <div className='row g-3 my-2'>
-                        <div className='col-md-3 p-1'>
+                        <div className='col-md-3 p-1 '>
                             <div className='p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded'>
                                 <div>
                                     <h3 className='fs-2'>230</h3>
