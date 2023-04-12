@@ -5,11 +5,10 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import '../assets/styles/dashboard.css'
 
 
-function Dashboard(Toggle) {
+function Dashboard() {
     return (
         <div>
             <div className='px-3 '>
-                <Navbar Toggle={Toggle} />
                 <div className='container-fluid '>
                     <div className='row g-3 my-2'>
                         <div className='col-md-3 p-1 '>

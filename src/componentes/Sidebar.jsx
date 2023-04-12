@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from "react";
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHouse, faUsers, faBook, faPager, faRightFromBracket } from '@fortawesome/free-solid-svg-icons'
@@ -6,6 +7,7 @@ import logo from '../assets/img/logo1.png'
 import '../assets/styles/sidebar.css'
 
 function Sidebar() {
+
   return (
     
             <div className=' p-0 '>
@@ -14,7 +16,6 @@ function Sidebar() {
             <i className='me-3 fs-4'><img src={logo} width='50px' /></i>
             <span className='brand-name fs-4'>Hola</span>
         </div>
-        <hr className='text-dark'/>
         <div className='list-group list-group-flush' style={{backgroundColor: "#572AB0"}}>
             <a className='list-group-item list-group-item-action py-2 my-1' style={{backgroundColor: "#572AB0"}}>
                 <FontAwesomeIcon className='fs-5 me-3' icon={faHouse} />
