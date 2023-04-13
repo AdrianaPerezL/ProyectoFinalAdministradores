@@ -5,6 +5,7 @@ import Dashboard from "../Dashboard";
 import IniciarSesionAdmi from "../IniciarSesion";
 import RegistroAdmi from "../RegistroAdmi"
 import Estudiantes from "../Estudiantes"
+import Materias from "../Materias"
 
 import "../../assets/styles/sidebar.css";
 import "bootstrap/js/dist/dropdown";
@@ -19,6 +20,7 @@ export const Rutas = () => {
           <Route path="/dashboard" element={<Dashboard />}></Route>
           <Route path="/registro" element={<RegistroAdmi />}></Route>
           <Route path="/Estudiantes" element={<Estudiantes/>}></Route>
+          <Route path="/Materias" element={<Materias/>}></Route>
         </Routes>
       </BrowserRouter>
     </>
