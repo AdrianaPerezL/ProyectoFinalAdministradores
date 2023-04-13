@@ -3,7 +3,7 @@ import "../assets/styles/IniciarSesionAdmi.css"
 import Fondo from "../assets/img/Fondo.png";
 import { useState } from "react";
 
-function login (){
+function IniciarSesion (){
        //estado inicial de formulario
  const datosFormularios = {
 
@@ -148,7 +148,7 @@ return (
                   id="inputEmail"
                   aria-describedby="inputGroup-sizing-default"
                   name="Carné"
-                  value={login.Carné}
+                  value={formulario.Carné}
                   onChange={ManejarEventoDeInputs}
                 />
                 {
@@ -166,7 +166,7 @@ return (
                   id="inputEmail"
                   aria-describedby="inputGroup-sizing-default"
                   name= 'Contraseña'
-                  value={login.Contraseña}
+                  value={formulario.Contraseña}
                   onChange={ManejarEventoDeInputs}
                 />
                 {
@@ -193,4 +193,4 @@ return (
 }
  
 
-export default login
+export default IniciarSesion 
