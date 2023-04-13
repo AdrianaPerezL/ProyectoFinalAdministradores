@@ -6,10 +6,11 @@ import '../assets/styles/Estudiantes.css'
 export const Estudiantes = () => {
   return (
     <>
+    <Navbar/>
       <h4 class="headingChart">Perfiles registrados</h4>
-      <div>
+      <div id="select">
         <div class="input-group mb-3">
-          <label class="input-group-text" for="inputGroupSelect01">
+          <label class="input-group-text" for="inputGroupSelect01" >
             Filtrar por
           </label>
           <select class="form-select" id="inputGroupSelect01">
@@ -21,13 +22,14 @@ export const Estudiantes = () => {
         </div>
       </div>
 
-      <div class="container">
+      <div class="container" id="ancho">
         <div class="row">
-          <table class="table mb-0 bg-white">
-            <thead class="bg-light">
+          <table class="table mb-0 bg-white" id="tabla">
+            <thead class="bg-light" id="encabezadotabla">
               <tr>
                 <th>NIE</th>
                 <th>Nombre</th>
+                <th>Foto</th>
                 <th>Institución</th>
                 <th>Edad</th>
                 <th>Grado</th>
@@ -39,9 +41,14 @@ export const Estudiantes = () => {
             <tbody>
               <tr>
                 <td>0000</td>
+
                 <td>
-                  <div class="d-flex align-items-center">
-                    <img
+                <p>John Doe</p>
+                </td>
+
+                <td>
+                <div class="d-flex align-items-center" id="imagen">
+                    <img id="imagen"
                       class="rounded-circle"
                       alt=""
                       width="90px"
@@ -51,7 +58,6 @@ export const Estudiantes = () => {
                     <div class="ms-1">
                       <p class="fw-bold mb-1"></p>
                       <p class="text-muted mb-0"></p>
-                      <p id="nombre">John Doe</p>
                     </div>
                   </div>
                 </td>
