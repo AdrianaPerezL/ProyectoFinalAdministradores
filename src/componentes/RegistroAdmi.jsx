@@ -266,8 +266,14 @@ return errors;
                   
                 </div>
                 <span className="details">Subir foto</span>
-                <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="foto" aria-label="Upload"></input>
-              
+                <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="foto" aria-label="Upload" name='Foto' value={formulario.Foto} onChange={ManejarEventoDeInputs} ></input>
+                {
+                    alerta.filter(input => input.valorInput == "Foto" && input.estado === true).map(message => (
+                      <div>
+                        <span className='text-danger'>{message.mensaje}</span>
+                      </div>
+                    ))
+                  }
                 <div className="button">
                   <input type="submit" defaultValue="Registrarse" />
                 </div>

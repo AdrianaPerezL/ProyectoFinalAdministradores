@@ -2,6 +2,8 @@ import React from "react";
 import "../assets/styles/IniciarSesionAdmi.css"
 import Fondo from "../assets/img/Fondo.png";
 import { useState } from "react";
+import { Link } from "react-router-dom"
+
 
 function IniciarSesion (){
        //estado inicial de formulario
@@ -186,7 +188,7 @@ return (
                   <a href="" style={{color: "#fff"}}>Entrar</a>
                 </button>
               </div>
-              <p className="text-center mt-1 pregunta">¿No tienes una cuenta? <span className="text-purple">Registrate</span></p>
+              <p className="text-center mt-1 pregunta">¿No tienes una cuenta? <Link to="/registro" className="text-purple">Registrate</Link></p>
 
               <div role="alert" id="alerta"></div>
             </form>
