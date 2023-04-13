@@ -18,28 +18,28 @@ function Dashboard() {
                         <div className='col-sm-4 p-1 '>
                             <div className='p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded'>
                                 <div>
-                                    <h3 className='fs-2'>230</h3>
-                                    <p className='fs-5'>Alumnos matriculados</p>
+                                    <h3 className='fs-2 number'>230</h3>
+                                    <p className='fs-6 parrafos'>Alumnos matriculados</p>
                                 </div>
-                                <FontAwesomeIcon className="p-3 fs-1" icon={faUsers} />                            
-                                </div>
-                        </div>
-                        <div className='col-sm-4 p-1'>
-                            <div className='p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded'>
-                                <div>
-                                    <h3 className='fs-2'>100</h3>
-                                    <p className='fs-5'>Docentes matriculados</p>
-                                </div>
-                                <FontAwesomeIcon className="p-3 fs-1" icon={faChalkboardUser} />                            
+                                <FontAwesomeIcon className="p-3 fs-1 iconos" icon={faUsers} />                            
                                 </div>
                         </div>
                         <div className='col-sm-4 p-1'>
                             <div className='p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded'>
                                 <div>
-                                    <h3 className='fs-2'>10</h3>
-                                    <p className='fs-5'>Escuelas registradas</p>
+                                    <h3 className='fs-2 number'>100</h3>
+                                    <p className='fs-6 parrafos'>Docentes matriculados</p>
                                 </div>
-                                <FontAwesomeIcon className="p-3 fs-1" icon={faSchool} />
+                                <FontAwesomeIcon className="p-3 fs-1 iconos" icon={faChalkboardUser} />                            
+                                </div>
+                        </div>
+                        <div className='col-sm-4 p-1'>
+                            <div className='p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded'>
+                                <div>
+                                    <h3 className='fs-2 number'>10</h3>
+                                    <p className='fs-6 parrafos'>Escuelas registradas</p>
+                                </div>
+                                <FontAwesomeIcon className="p-3 fs-1 iconos" icon={faSchool} />
                             </div>
                         </div>
                        
