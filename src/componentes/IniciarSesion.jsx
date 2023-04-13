@@ -7,7 +7,7 @@ function IniciarSesion (){
        //estado inicial de formulario
  const datosFormularios = {
 
-    Carné: "",
+    Carne: "",
     Contraseña: "",
  }
 
@@ -44,10 +44,14 @@ function IniciarSesion (){
     const handleLoginSession = (e) =>{
     e.preventDefault();
     
+    let verificarInputs = [
+      {nombre: "Carne", value: formulario.Carne},
+      {nombre: "Contraseña", value: formulario.Contraseña},
+  ];
 
 
     //Enviar los datos a la función de validación y se reciben
-    const datosValidados = ValidarInputs() 
+    const datosValidados = ValidarInputs(verificarInputs) 
 
     console.log(datosValidados);
 
@@ -80,19 +84,19 @@ const datosDelFormulario = data;
 //Proceso de validación
 datosDelFormulario.map((valorInput) =>{
 
-  switch(valorInput.Carné){
-    case 'Carné': {
+  switch(valorInput.nombre){
+    case 'Carne': {
 
       if (valorInput.value === '' || valorInput.value === null){
 
         errors.push({
-          valorInput:valorInput.Carné,
+          valorInput:valorInput.nombre,
           mensaje: '*Campo requerido',
           estado:true
         });
       }else{
         errors.push({
-          valorInput:valorInput.Carné,
+          valorInput:valorInput.nombre,
           mensaje:'',
           estado:false
         })
@@ -105,13 +109,13 @@ datosDelFormulario.map((valorInput) =>{
       if (valorInput.value === '' || valorInput.value === null){
 
         errors.push({
-          valorInput:valorInput.Contraseña,
+          valorInput:valorInput.nombre,
           mensaje: '*Campo requerido',
           estado:true
         });
       }else{
         errors.push({
-          valorInput:valorInput.Contraseña,
+          valorInput:valorInput.nombre,
           mensaje: '', 
           estado:false
         })
@@ -147,12 +151,12 @@ return (
                   placeholder="Escribe tu Carné"
                   id="inputEmail"
                   aria-describedby="inputGroup-sizing-default"
-                  name="Carné"
-                  value={formulario.Carné}
+                  name="Carne"
+                  value={formulario.Carne}
                   onChange={ManejarEventoDeInputs}
                 />
                 {
-                  alerta.filter(input => input.valorInput == "email" && input.estado === true).map(message => (
+                  alerta.filter(input => input.valorInput == "Carne" && input.estado === true).map(message => (
                     <div>
                       <span className='text-danger'>{message.mensaje}</span>
                     </div>
@@ -170,7 +174,7 @@ return (
                   onChange={ManejarEventoDeInputs}
                 />
                 {
-                  alerta.filter(input => input.valorInput == "contraseña" && input.estado === true).map(message => (
+                  alerta.filter(input => input.valorInput == "Contraseña" && input.estado === true).map(message => (
                     <div>
                       <span className='text-danger'>{message.mensaje}</span>
                     </div>
