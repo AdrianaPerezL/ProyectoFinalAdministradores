@@ -12,7 +12,7 @@ function Dashboard() {
     return (
         <div>
             <Navbar />
-            <div className='px-3 contenedordashboard'>
+            <div className='px-3 contenedordashboard2'>
                 <div className='container-fluid '>
                     <div className='row g-3 d-flex p-0'>
                         <div className='col-sm-4 p-1 '>
