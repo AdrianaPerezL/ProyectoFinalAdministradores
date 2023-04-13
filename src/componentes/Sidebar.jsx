@@ -12,30 +12,32 @@ function Sidebar() {
     
             <div className=' p-0 '>
     <div className='sidebar min-vh-100'>
-        <div>
+        <div className='mb-2'>
             <i className='me-3 fs-4'><img src={logo} width='50px' /></i>
+            <div>
             <span className='brand-name fs-4' style={{color: "#ffffff"}}>Bienvenidos</span>
+            </div>
         </div>
         <div className='list-group list-group-flush' style={{backgroundColor: "#572AB0"}}>
             <a className='list-group-item list-group-item-action py-2 my-1' style={{backgroundColor: "#572AB0"}}>
                 <FontAwesomeIcon className='fs-5 me-3' icon={faHouse} />
-                <span className='fs-5'>Dashboard</span>
+                <span className='fs-6'>Dashboard</span>
             </a>
             <a className='list-group-item list-group-item-action py-2 my-1' style={{backgroundColor: "#572AB0"}}>
                 <FontAwesomeIcon className='fs-5 me-3' icon={faUsers} />
-                <span className='fs-5'>Estudiantes</span>
+                <span className='fs-6'>Estudiantes</span>
             </a>
             <a className='list-group-item list-group-item-action py-2 my-1' style={{backgroundColor: "#572AB0"}}>
             <FontAwesomeIcon className='fs-5 me-3' icon={faBook} />
-                <span className='fs-5'>Materias</span>
+                <span className='fs-6'>Materias</span>
             </a>
             <a className='list-group-item list-group-item-action py-2 my-1' style={{backgroundColor: "#572AB0"}}>
             <FontAwesomeIcon className='fs-5 me-3' icon={faPager} />
-                <span className='fs-5'>Cuestionarios</span>
+                <span className='fs-6'>Cuestionarios</span>
             </a>
             <a className='list-group-item list-group-item-action py-2 my-1' style={{backgroundColor: "#572AB0"}}>
             <FontAwesomeIcon className='fs-5 me-3' icon={faRightFromBracket} />
-                <span className='fs-5'>Logout</span>
+                <span className='fs-6'>Logout</span>
             </a>
         </div>
     </div>
