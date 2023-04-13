@@ -47,7 +47,7 @@ function IniciarSesionAdmi (){
 
 
     //Enviar los datos a la función de validación y se reciben
-    const datosValidados = ValidarInputs(verificarInputs) 
+    const datosValidados = ValidarInputs() 
 
     console.log(datosValidados);
 
