@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Dashboard from '../Dashboard'
 import Navbar from '../Navbar'
 import Sidebar from '../Sidebar'
+import Estudiantes from '../Estudiantes'
 import '../../assets/styles/sidebar.css'
 
 export const Rutas = () => {
@@ -23,6 +24,7 @@ export const Rutas = () => {
                     <BrowserRouter>
                     <Routes>
                         <Route Toggle={Toggle} path='/' element={<Dashboard />}></Route>
+                        <Route Toggle={Toggle} path='/Estudiantes' element={<Estudiantes/>}></Route>
                     </Routes>
                 </BrowserRouter>
                 </div>
