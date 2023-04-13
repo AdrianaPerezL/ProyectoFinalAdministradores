@@ -49,8 +49,21 @@ function Dashboard() {
                             </div>
                         </div>
                     </div>
-                </div>    
+
+                        {/* Gráfico */}
+                    <h4 class="headingChart">Perfiles registrados</h4>
+                <div class="container">
+                    <div class="row">
+                        <canvas id="lineChart" class="chart"></canvas>
+                    </div>
+                </div>
+                </div>   
+                
+                 
              </div>
+
+
+             
         </div>
     )
 }
