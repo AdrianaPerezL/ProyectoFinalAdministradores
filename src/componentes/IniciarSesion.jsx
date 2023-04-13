@@ -1,6 +1,6 @@
 import React from "react";
 import "../assets/styles/IniciarSesionAdmi.css"
-import Fondo from "../assets/img/Fondo.png"
+import Fondo from "../assets/img/Fondo.png";
 import { useState } from "react";
 
 function IniciarSesionAdmi (){
@@ -80,19 +80,19 @@ const datosDelFormulario = data;
 //Proceso de validación
 datosDelFormulario.map((valorInput) =>{
 
-  switch(valorInput.nombre){
+  switch(valorInput.Carné){
     case 'Carné': {
 
       if (valorInput.value === '' || valorInput.value === null){
 
         errors.push({
-          valorInput:valorInput.nombre,
+          valorInput:valorInput.Carné,
           mensaje: '*Campo requerido',
           estado:true
         });
       }else{
         errors.push({
-          valorInput:valorInput.nombre,
+          valorInput:valorInput.Carné,
           mensaje:'',
           estado:false
         })
@@ -105,13 +105,13 @@ datosDelFormulario.map((valorInput) =>{
       if (valorInput.value === '' || valorInput.value === null){
 
         errors.push({
-          valorInput:valorInput.nombre,
+          valorInput:valorInput.Contraseña,
           mensaje: '*Campo requerido',
           estado:true
         });
       }else{
         errors.push({
-          valorInput:valorInput.nombre,
+          valorInput:valorInput.Contraseña,
           mensaje: '', 
           estado:false
         })
@@ -130,26 +130,26 @@ return errors;
 
 
     return (
-        <section class="section-padding">
-        <div class="container"></div>
-            <div class="title">Iniciar Sesión Administrador </div>
-            <div class="content">
+        <section className="section-padding">
+        <div className="container"></div>
+            <div className="title">Iniciar Sesión Administrador </div>
+            <div className="content">
               <form action="#"></form>
-                <div class="user-details">
-                  <div class="input-box">
-                  <div class="input-box">
-                    <span class="details">Carné</span>
+                <div className="user-details">
+                  <div className="input-box">
+                  <div className="input-box">
+                    <span className="details">Carné</span>
                     <input type="text" placeholder="Ingresa tu Carné" required></input>
                   </div>
-                  <div class="input-box">
-                    <span class="details">Contraseña</span>
+                  <div className="input-box">
+                    <span className="details">Contraseña</span>
                     <input type="text" placeholder="Ingresa tu Contraseña" required></input>
                   </div>
                 </div>
                  <div>
                  
                 
-                <div class="button">
+                <div className="button">
                   <input type="submit" value="Registrarse"></input>
                 </div>
               </div>

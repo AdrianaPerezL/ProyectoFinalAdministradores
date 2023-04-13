@@ -1,17 +1,20 @@
-import React from "react" 
+import React from 'react'
 import '../assets/styles/RegistroAdmi.css'
-import Fondo from "../assets/img/Fondo.png"
-import { useState } from "react";
+import Fondo from "../assets/img/Fondo.png";
+ import { useState } from "react";
 
 
-function RegistroAdmi (){
+
+export const Registro = () => {
+
           //estado inicial de formulario
           const datosFormularios = {
-            NIE: "",
-            email: "",
-            foto: "",
-            telefono: "",
-            direccion: ""
+            Nombre: "",
+            Apellido: "",
+            Correo: "",
+            Contraseña: "",
+            Carné: "",
+            Foto: "",
         }
 
         //Estado inicial para la alerta
@@ -53,11 +56,13 @@ function RegistroAdmi (){
 
     //ordenar los datos para enviar la validación
     let verificarInputs = [
-        { nombre: "NIE", value: formulario.NIE},
-        { nombre: "email", value: formulario.email},
-        { nombre: "foto", value: formulario.foto},
-        { nombre: "telefono", value: formulario.telefono},
-        { nombre: "direccion", value: formulario.direccion},
+        { nombre: "Nombre", value: formulario.Nombre},
+        { nombre: "Apellido", value: formulario.Apellido},
+        { nombre: "Foto", value: formulario.Foto},
+        { nombre: "Correo", value: formulario.Correo},
+        { nombre: "Carné", value: formulario.Carné},
+        { nombre: "Contraseña", value: formulario.Contraseña},
+    
     ];
 
     //Enviar los datos a la función de validación y se reciben
@@ -95,7 +100,7 @@ const datosDelFormulario = data;
 datosDelFormulario.map((valorInput) =>{
 
   switch(valorInput.nombre){
-    case 'NIE': {
+    case 'Nombre': {
 
       if (valorInput.value === '' || valorInput.value === null){
 
@@ -115,7 +120,7 @@ datosDelFormulario.map((valorInput) =>{
       break;
     }
 
-    case 'email': {
+    case 'Apellido': {
       if (valorInput.value === '' || valorInput.value === null){
 
         errors.push({
@@ -133,7 +138,7 @@ datosDelFormulario.map((valorInput) =>{
       break;
     }
 
-    case 'foto': {
+    case 'Foto': {
       if (valorInput.value === '' || valorInput.value === null){
 
         errors.push({
@@ -151,7 +156,7 @@ datosDelFormulario.map((valorInput) =>{
       break;
     }
 
-    case 'telefono': {
+    case 'Correo': {
       if (valorInput.value === '' || valorInput.value === null){
 
         errors.push({
@@ -169,7 +174,7 @@ datosDelFormulario.map((valorInput) =>{
       break;
     }
 
-    case 'direccion': {
+    case 'Contraseña': {
       if (valorInput.value === '' || valorInput.value === null){
 
         errors.push({
@@ -198,24 +203,25 @@ datosDelFormulario.map((valorInput) =>{
 
 //Retornamos el total de validaciones
 return errors;
- }
-    return(
-      <div className="" style={{ backgroundImage: ``,  backgroundPosition:"center",
+};
+  return (
+    
+    <div className="" style={{ backgroundImage: `url(${Fondo})`,  backgroundPosition:"center",
     backgroundSize:"cover" }}>
         
       <section className="section-padding" onSubmit={handleLoginSession} >
         <div className="containerform">
           <div className=''>
-            <div className="title">Registrarse</div>
+            <div className="title">Registro Administrador </div>
             <div className="content">
               <form className='formDiv'>
                 <div className="user-details">
                 
                   <div className="input-box">
-                    <span className="details">NIE</span>
-                    <input type="number" placeholder="Ingresa tu NIE" name='NIE' value={formulario.NIE} onChange={ManejarEventoDeInputs}/>
+                    <span className="details">Nombre</span>
+                    <input type="number" placeholder="Ingresa tu Nombre" name='Nombre' value={formulario.NIE} onChange={ManejarEventoDeInputs}/>
                   {
-                    alerta.filter(input => input.valorInput == "NIE" && input.estado === true).map(message => (
+                    alerta.filter(input => input.valorInput == "Nombre" && input.estado === true).map(message => (
                       <div>
                         <span className='text-danger'>{message.mensaje}</span>
                       </div>
@@ -223,10 +229,10 @@ return errors;
                   }
                   </div>
                   <div className="input-box">
-                    <span className="details">Email</span>
-                    <input type="text" placeholder="Ingresa tu email" name='email' value={formulario.email} onChange={ManejarEventoDeInputs}/>
+                    <span className="details">Apellido</span>
+                    <input type="text" placeholder="Ingresa tu Apellido" name='Apellido' value={formulario.email} onChange={ManejarEventoDeInputs}/>
                     {
-                    alerta.filter(input => input.valorInput == "email" && input.estado === true).map(message => (
+                    alerta.filter(input => input.valorInput == "Apellido" && input.estado === true).map(message => (
                       <div>
                         <span className='text-danger'>{message.mensaje}</span>
                       </div>
@@ -234,33 +240,23 @@ return errors;
                   }
                   </div>
                   <div className="input-box">
-                    <span className="details">Numero telefonico</span>
-                    <input type="number" placeholder="Ingresa tu Numero telefonico" name='telefono' value={formulario.telefono} onChange={ManejarEventoDeInputs}/>
+                    <span className="details">Correo</span>
+                    <input type="number" placeholder="Ingresa tu Correo" name='Correo' value={formulario.telefono} onChange={ManejarEventoDeInputs}/>
                     {
-                    alerta.filter(input => input.valorInput == "telefono" && input.estado === true).map(message => (
+                    alerta.filter(input => input.valorInput == "Correo" && input.estado === true).map(message => (
                       <div>
                         <span className='text-danger'>{message.mensaje}</span>
                       </div>
                     ))
                   }
-                  </div>
-                  <div className="input-box">
-                    <span className="details">Foto</span>
-                    <input type="file" placeholder="Ingresa foto" name='foto' value={formulario.foto} onChange={ManejarEventoDeInputs}/>
-                    {
-                    alerta.filter(input => input.valorInput == "foto" && input.estado === true).map(message => (
-                      <div>
-                        <span className='text-danger'>{message.mensaje}</span>
-                      </div>
-                    ))
-                  }
+                
                   </div>
                  
                   <div className="input-box">
-                    <span className="details">Dirección</span>
-                    <input type="text" placeholder="Ingresa tu dirección" name='direccion' value={formulario.direccion} onChange={ManejarEventoDeInputs}/>
+                    <span className="details">Contraseña</span>
+                    <input type="text" placeholder="Ingresa tu Contraseña" name='Contraseña' value={formulario.direccion} onChange={ManejarEventoDeInputs}/>
                     {
-                    alerta.filter(input => input.valorInput == "direccion" && input.estado === true).map(message => (
+                    alerta.filter(input => input.valorInput == "Contraseña" && input.estado === true).map(message => (
                       <div>
                         <span className='text-danger'>{message.mensaje}</span>
                       </div>
@@ -269,6 +265,8 @@ return errors;
                   </div>
                   
                 </div>
+                <span className="details">Subir foto</span>
+                <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="foto" aria-label="Upload"></input>
               
                 <div className="button">
                   <input type="submit" defaultValue="Registrarse" />
@@ -279,9 +277,7 @@ return errors;
         </div>
       </section>
     </div>
-    )
-
+  )
 }
 
-
-export default RegistroAdmi
+export default Registro

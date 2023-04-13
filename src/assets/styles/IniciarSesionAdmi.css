@@ -1,67 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-/* *{
-  margin: 0;
-  padding: 0px;
-  box-sizing: border-box;
-  font-family: 'Poppins',sans-serif;
-} */
-/* body{
-  height: 100vh;
+
+.bodyLogin{
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 30px;
+  margin: 0;
+}
 
-} */
-.container{
-  max-width: 700px;
-  width: 100%;
+.card{
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+}
+
+.card-body{
   background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
-
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 18px 18px 15px -3px rgba(0,0,0,0.1);
+  
 }
-.container .title{
-  font-size: 35px;
-  font-weight: 500;
-  position: relative;
+
+.botondiv{
+  display: flex;
+  
+}
+
+.btn-login{
+  border-radius: 90px;
+  background-color: #572ab0;
+  color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.card-title{
   font-family: 'Yanone Kaffeesatz', sans-serif;
-  
-}
-.container .title::before{
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 3px;
-  width: 30px;
-  border-radius: 5px;
-  
-}
-.content form .user-details{
-  
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 20px 0 12px 0;
+  font-size: 30px;
+  font-weight: 600;
+  color: black;
 }
 
-form .user-details .input-box{
-  margin-bottom: 15px;
-  width: calc(100% / 2 - 20px);
-}
-form .input-box span.details{
-  display: block;
-  font-weight: 500;
-  margin-bottom: 5px;
-}
-form .input-box span.details{
-  display: block;
-  font-weight: 500;
-  margin-bottom: 5px;
-}
-.user-details .input-box input{
-  
+.form-control{
+ 
+  font-family: 'Poppins';
+  border-color: #9b59b6;
+
+  height: 45px;
+  width: 100%;
+  outline: none;
   font-size: 16px;
   border-radius: 5px;
   padding-left: 15px;
@@ -70,85 +59,8 @@ form .input-box span.details{
   transition: all 0.3s ease;
 }
 
-.user-details .input-box input:focus,
-.user-details .input-box input:valid{
+
+.form-control:focus{
   border-color: #9b59b6;
-}
- form .gender-details .gender-title{
-  font-size: 20px;
-  font-weight: 500;
- }
- form .category{
-   display: flex;
-   width: 80%;
-   margin: 14px 0 ;
-   justify-content: space-between;
- }
- form .category label{
-   display: flex;
-   align-items: center;
-   cursor: pointer;
- }
- form .category label .dot{
-  height: 18px;
-  width: 18px;
-  border-radius: 50%;
-  margin-right: 10px;
-  background: #d9d9d9;
-  border: 5px solid transparent;
-  transition: all 0.3s ease;
-}
- #dot-1:checked ~ .category label .one,
- #dot-2:checked ~ .category label .two,
- #dot-3:checked ~ .category label .three{
-   background: #9b59b6;
-   border-color: #d9d9d9;
- }
- form input[type="radio"]{
-   display: none;
- }
- form .button{
-   height: 45px;
-   margin: 35px 0
- }
- form .button input{
-   height: 100%;
-   width: 100%;
-   border-radius: 5px;
-   border: none;
-   color: #fff;
-   font-size: 18px;
-   font-weight: 500;
-   letter-spacing: 1px;
-   cursor: pointer;
-   transition: all 0.3s ease;
-   background-color: #5c28af ;
- }
- form .button input:hover{
-  /* transform: scale(0.99); */
-  background-color: #fe48b9;
-  }
- @media(max-width: 584px){
- .container{
-  max-width: 100%;
-}
-form .user-details .input-box{
-    margin-bottom: 15px;
-    width: 100%;
-  }
-  form .category{
-    width: 100%;
-  }
-  .content form .user-details{
-    max-height: 300px;
-    overflow-y: scroll;
-  }
-  .user-details::-webkit-scrollbar{
-    width: 5px;
-  }
-  }
-  @media(max-width: 459px){
-  .container .content .category{
-    flex-direction: column;
-  }
+  box-shadow: none;
 }
