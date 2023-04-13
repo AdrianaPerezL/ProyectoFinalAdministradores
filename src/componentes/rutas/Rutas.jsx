@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "../Dashboard";
 import Navbar from "../Navbar";
 import Sidebar from "../Sidebar";
+import IniciarSesion from '../IniciarSesion'
 import "../../assets/styles/sidebar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faCompass } from "@fortawesome/free-solid-svg-icons";
@@ -97,6 +98,7 @@ export const Rutas = () => {
               </nav>
               <Routes>
                 <Route path="/" element={<Dashboard />}></Route>
+                <Route path="/login" element={< IniciarSesion />}></Route>
               </Routes>
             </BrowserRouter>
           </div>

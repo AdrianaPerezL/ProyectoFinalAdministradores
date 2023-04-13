@@ -9,8 +9,9 @@ function Navbar(){
     return (
         
         <nav className="navbar navbar-expand-sm navbar-dark bg-transparent">
-            <FontAwesomeIcon className="navbar-brand fs-4 ml-1" icon={faBars} onClick={cambio} />
-            <button className="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"            data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+            <FontAwesomeIcon className="navbar-brand fs-4 ml-1" icon={faBars}  />
+            <button className="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"            
+            data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
             <FontAwesomeIcon className="navbar-brand fs-4 ml-1" icon={faBars} />
 
             </button>
