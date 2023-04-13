@@ -3,7 +3,7 @@ import "../assets/styles/IniciarSesionAdmi.css"
 import Fondo from "../assets/img/Fondo.png";
 import { useState } from "react";
 
-function IniciarSesionAdmi (){
+function login (){
        //estado inicial de formulario
  const datosFormularios = {
 
@@ -129,35 +129,68 @@ return errors;
 
 
 
-    return (
-        <section className="section-padding">
-        <div className="container"></div>
-            <div className="title">Iniciar Sesión Administrador </div>
-            <div className="content">
-              <form action="#"></form>
-                <div className="user-details">
-                  <div className="input-box">
-                  <div className="input-box">
-                    <span className="details">Carné</span>
-                    <input type="text" placeholder="Ingresa tu Carné" required></input>
-                  </div>
-                  <div className="input-box">
-                    <span className="details">Contraseña</span>
-                    <input type="text" placeholder="Ingresa tu Contraseña" required></input>
-                  </div>
-                </div>
-                 <div>
-                 
-                
-                <div className="button">
-                  <input type="submit" value="Registrarse"></input>
-                </div>
+return (
+  <>
+    <div className="vh-100" style={{ backgroundImage: `url(${Fondo})`,  backgroundPosition:"center",
+        backgroundSize:"cover" }}>
+      <section className="bodyLogin">
+        <div className="card col-8 col-sm-4 col-md-4 ">
+          <div className="card-body">
+            <h5 className="card-title text-center w-100">Iniciar Sesión Administrador</h5>
+            <form id="" className="w-100" onSubmit={handleLoginSession}>
+              <div className="form-group w-100">
+                <label className="mt-4">Carné</label>
+                <br />
+                <input
+                  className="w-100 mt-2 mb-2 form-control"
+                  type="Carné"
+                  placeholder="Escribe tu Carné"
+                  id="inputEmail"
+                  aria-describedby="inputGroup-sizing-default"
+                  name="Carné"
+                  value={login.Carné}
+                  onChange={ManejarEventoDeInputs}
+                />
+                {
+                  alerta.filter(input => input.valorInput == "email" && input.estado === true).map(message => (
+                    <div>
+                      <span className='text-danger'>{message.mensaje}</span>
+                    </div>
+                  ))
+                }
+                <label className="mt-4">Contraseña</label>
+                <input
+                  className="w-100 mt-2 mb-2 form-control"
+                  type="password"
+                  placeholder="Escribe tu Contraseña"
+                  id="inputEmail"
+                  aria-describedby="inputGroup-sizing-default"
+                  name= 'Contraseña'
+                  value={login.Contraseña}
+                  onChange={ManejarEventoDeInputs}
+                />
+                {
+                  alerta.filter(input => input.valorInput == "contraseña" && input.estado === true).map(message => (
+                    <div>
+                      <span className='text-danger'>{message.mensaje}</span>
+                    </div>
+                  ))
+                }
               </div>
-            </div>
+              <div className="botondiv w-100">
+                <button className="mt-2 btn-login w-100" type="submit">
+                  <a href="" style={{textDecoration: "none" }}>Entrar</a>
+                </button>
+              </div>
+              <div role="alert" id="alerta"></div>
+            </form>
           </div>
-    </section>
-    )
-     
- 
+        </div>
+      </section>
+    </div>
+  </>
+);
 }
-export default IniciarSesionAdmi 
+ 
+
+export default login
