@@ -183,7 +183,7 @@ return (
               </div>
               <div className="botondiv w-100">
                 <button className="mt-2 btn-login w-100" type="submit">
-                  <a href="" style={{textDecoration: "none" }}>Entrar</a>
+                  <a href="" style={{color: "#fff"}}>Entrar</a>
                 </button>
               </div>
               <div role="alert" id="alerta"></div>
