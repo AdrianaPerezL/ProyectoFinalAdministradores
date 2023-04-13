@@ -1,8 +1,8 @@
 import React from 'react'
 import '../assets/styles/RegistroAdmi.css'
 import Fondo from "../assets/img/Fondo.png";
- import { useState } from "react";
-
+import { useState } from "react";
+import { Link } from "react-router-dom"
 
 
 export const Registro = () => {
@@ -271,6 +271,8 @@ return errors;
                 <div className="button">
                   <input type="submit" defaultValue="Registrarse" />
                 </div>
+                <p className="text-center mt-1 pregunta">¿Ya tienes una cuenta? <Link to="/" className="text-purple">Inicia Sesión</Link></p>
+
               </form>
             </div>
           </div>

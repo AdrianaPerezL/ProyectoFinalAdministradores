@@ -183,9 +183,11 @@ return (
               </div>
               <div className="botondiv w-100">
                 <button className="mt-2 btn-login w-100" type="submit">
-                  <a href="" style={{textDecoration: "none" }}>Entrar</a>
+                  <a style={{textDecoration: "none" }}>Entrar</a>
                 </button>
               </div>
+              <p className="text-center mt-1 pregunta">¿No tienes una cuenta? <span className="text-purple">Registrate</span></p>
+
               <div role="alert" id="alerta"></div>
             </form>
           </div>
