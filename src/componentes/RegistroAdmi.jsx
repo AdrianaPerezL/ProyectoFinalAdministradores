@@ -61,6 +61,7 @@ export const Registro = () => {
         { nombre: "Foto", value: formulario.Foto},
         { nombre: "Correo", value: formulario.Correo},
         { nombre: "Carné", value: formulario.Carné},
+        { nombre: "Contraseña", value: formulario.Contraseña},
     
     ];
 
@@ -264,9 +265,8 @@ return errors;
                   </div>
                   
                 </div>
-                
-                <div className="input-group"></div>
-                        <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="foto" aria-label="Upload"></input>
+                <span className="details">Subir foto</span>
+                <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="foto" aria-label="Upload"></input>
               
                 <div className="button">
                   <input type="submit" defaultValue="Registrarse" />
