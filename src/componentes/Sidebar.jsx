@@ -6,7 +6,7 @@ import { faHouse, faUsers, faBook, faPager, faRightFromBracket } from '@fortawes
 import logo from '../assets/img/logo1.png'
 import '../assets/styles/sidebar.css'
 
-function Sidebar() {
+function Sidebar(props) {
 
   return (
     
@@ -15,6 +15,7 @@ function Sidebar() {
         <div className='mb-2'>
             <i className='me-3 fs-4'><img src={logo} width='50px' /></i>
             <div>
+            <FontAwesomeIcon className='fs-5 me-3' icon={faUsers} />
             <span className='brand-name fs-4' style={{color: "#ffffff"}}>Bienvenidos</span>
             </div>
         </div>

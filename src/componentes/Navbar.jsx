@@ -19,7 +19,7 @@ function Navbar(){
     };
 
     return (
-        <div className="container-fluid  bodyDashboard">
+        <div className="container-fluid  bodyDashboard ">
         <div className="row ">
           {toggle && (
             <div
