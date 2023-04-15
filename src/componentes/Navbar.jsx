@@ -8,7 +8,7 @@ import Sidebar from '../componentes/Sidebar'
 
 function Navbar(){
 
-    const [toggle, setToggle] = useState(true);
+    const [toggle, setToggle] = useState(false);
 
     const Toggle = () => {
       if (toggle === true) {
